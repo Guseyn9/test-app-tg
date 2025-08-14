@@ -4,6 +4,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+  if (window.Telegram && window.Telegram.WebApp) {
     const tg = window.Telegram.WebApp;
     tg.ready();
     setUser(tg.initDataUnsafe?.user || null);
@@ -11,7 +12,10 @@ function App() {
     tg.MainButton.setText("Закрыть приложение");
     tg.MainButton.onClick(() => tg.close());
     tg.MainButton.show();
-  }, []);
+  } else {
+    console.warn("Telegram WebApp SDK не доступен");
+  }
+}, []);
 
   return (
     <div style={{ padding: 20, fontFamily: "Arial" }}>
