@@ -17,7 +17,6 @@ function App() {
     tg.MainButton.show();
   } else {
     console.warn("Telegram WebApp SDK не доступен");
-    console.warn(user1);
   }
 }, []);
 
