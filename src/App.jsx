@@ -26,7 +26,7 @@ function App() {
           Вы зашли как <b>{user.first_name}</b> (@{user.username})
         </p>
       ) : (
-        <p>Данные о пользователе не получены Данные о пользователе: {window.Telegram.WebApp.initDataUnsafe}</p>
+        <p>Данные о пользователе не получены Данные о пользователе: {JSON.stringify(user, null, 2)}</p>
       )}
     </div>
   );
