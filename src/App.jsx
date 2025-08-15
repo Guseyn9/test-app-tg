@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div style={{ padding: 20, fontFamily: "Arial" }}>
-      <h1>Привет из Telegram Mini App</h1>
+      <h1>Привет из Telegram Mini App :)</h1>
       {user ? (
         <p>
           Вы зашли как <b>{user.first_name}</b> (@{user.username})
