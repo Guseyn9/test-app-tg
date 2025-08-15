@@ -9,7 +9,7 @@ function App() {
     const tg = window.Telegram.WebApp;
     tg.ready();
     setUser(tg.initDataUnsafe?.user || null);
-    setUser1(tg.initData?.user)
+    setUser1(tg.initData)
     console.log("initDataUnsafe:", tg.initDataUnsafe);
 
     tg.MainButton.setText("Закрыть приложение");
