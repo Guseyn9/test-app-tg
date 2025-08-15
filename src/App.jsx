@@ -25,7 +25,7 @@ function App() {
       <h1>Привет из Telegram Mini App :)</h1>
       {user ? (
         <p>
-          Вы зашли как <b>{user.first_name}</b> (@{user.username})
+          Вы зашли как <b>{user.first_name}</b> (@{user.username}) ({user.id})
         </p>
       ) : (
         <p>Данные о пользователе не получены Данные о пользователе: {JSON.stringify(user1, null, 2)}</p>
